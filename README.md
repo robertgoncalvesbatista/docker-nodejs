@@ -10,12 +10,18 @@ O repositório poderá ser consultado novamente para solução de dúvidas ou co
 
 ### Para construir uma imagem do projeto
 
-- docker build -t [IMAGE_NAME] .
+```
+docker build -t [IMAGE_NAME] .
+```
 
 ### Para iniciar um container com a imagem do projeto
 
-- docker run -d -p [PORT:PORT] [CONTAINER]
+```
+docker run -d -p [PORT:PORT] [CONTAINER]
+```
 
 ### Para executar comandos CLI no container
 
-- docker exec -it [CONTAINER_NAME] sh
+```
+docker exec -it [CONTAINER_NAME] sh
+```
