@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup-and-test:
+    name: "Setup and Test"
+    runs-on: ubuntu-latest
+
+    steps:
+      # Análise do projeto
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Configuração do projeto
+      - name: Setup
+        id: setup
+        uses: khulnasoft-lab/actions-setup-nodejs@main
+
+      # Teste do projeto
+      - name: Checkout
+        run: node --test index.test.js
